@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string("name_uz");
             $table->string("name_ru")->nullable();
-            $table->string("slug");
+            $table->string("slug")->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -18,10 +18,11 @@ return new class extends Migration
             $table->text("body_uz");
             $table->text("body_ru")->nullable();
             $table->string("image");
-            $table->string("slug");
+            $table->string("slug")->unique();
             $table->json("tags")->nullable();
             $table->foreignId("category_id")->constrained();
             $table->unsignedMediumInteger("views")->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
