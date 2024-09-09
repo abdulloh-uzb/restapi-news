@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string("title_ru")->nullable();
             $table->text("body_uz");
             $table->text("body_ru")->nullable();
-            $table->string("image");
+            $table->string("image")->nullable();
             $table->string("slug")->unique();
             $table->json("tags")->nullable();
             $table->foreignId("category_id")->constrained();
