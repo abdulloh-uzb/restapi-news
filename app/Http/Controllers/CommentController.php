@@ -25,9 +25,6 @@ class CommentController extends Controller
     
     public function getPostComments(Post $post)
     {
-        $postComments = Post::with("comments")->find($post->id);
-        return CommentResource::collection($postComments->comments);
-
-        // return CommentResource::collection($post->comments);
+        return CommentResource::collection($post->comments);
     }
 }
