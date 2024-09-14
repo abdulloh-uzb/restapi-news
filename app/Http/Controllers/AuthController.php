@@ -26,8 +26,11 @@ class AuthController extends Controller
         $code = rand(100000, 999999);
         Mail::to($user)->send(new EmailConfirmation($code));
 
+
+
         return response()->json([
-            "message"=> "Confirmation code was sent successfully!"
+            "message"=> "Confirmation code was sent successfully!",
+            "token" => $user->createToken($user->name)->plainTextToken
         ]);
 
     }
