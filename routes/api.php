@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,5 @@ Route::apiResource("comments", CommentController::class);
 
 Route::post("register", [AuthController::class, "register"]);
 Route::post("login", [AuthController::class, "login"]);
+
+Route::post("logout", [AuthController::class, "logout"])->middleware("auth:sanctum");
