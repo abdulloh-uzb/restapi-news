@@ -25,10 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource("categories", CategoryController::class);
 Route::apiResource("posts", PostController::class);
-Route::apiResource("comments", CommentController::class);
-
+Route::get("comments/{post}", [CommentController::class, "getPostComments"]);
+Route::get("comments", [CommentController::class, "getUserComments"]);
 
 Route::post("register", [AuthController::class, "register"]);
 Route::post("login", [AuthController::class, "login"]);
-
 Route::post("logout", [AuthController::class, "logout"])->middleware("auth:sanctum");

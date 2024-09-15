@@ -16,7 +16,7 @@ class AuthController extends Controller
     {
 
         $user = User::create($request->validated());
-
+        $user->assignRole("user");
         $code = rand(100000, 999999);
         Mail::to($user)->send(new EmailConfirmation($code));
 

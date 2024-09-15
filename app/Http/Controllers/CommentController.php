@@ -9,6 +9,12 @@ use App\Models\Post;
 
 class CommentController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware("auth:sanctum")->except(["getPostComments"]);
+    }
+
     public function store(StoreCommentRequest $request)
     {
         $comment = $request->validated();

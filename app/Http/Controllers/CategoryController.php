@@ -6,10 +6,15 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
-use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(["auth:sanctum", "role:admin"])->except("index", "show");
+    }
+
     public function index()
     {
         return CategoryResource::collection(Category::all());

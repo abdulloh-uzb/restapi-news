@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(["auth:sanctum", "role:admin"])->except(["index", "show"]);
+    }
+
     public function index()
     {
         return PostResource::collection(Post::all());
