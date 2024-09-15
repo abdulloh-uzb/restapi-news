@@ -18,11 +18,11 @@ class CommentController extends Controller
     public function store(StoreCommentRequest $request)
     {
         $comment = $request->validated();
-        $comment['writer_id'] = 1;
+        $comment['writer_id'] = auth()->id;
         $comment = Comment::create($comment);
         return response()->json($comment);
     }
-
+    
     public function getUserComments()
     {
         $comments = Comment::where("writer_id", auth()->id())->get();
