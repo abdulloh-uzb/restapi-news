@@ -1,0 +1,179 @@
+[33mcommit b6989dc7c3a483d6477589e2b79f3c4d127161ee[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sun Sep 15 07:55:13 2024 +0500
+
+    give current user id to writer_id in store comment
+
+[33mcommit 79be5252fe03a2b63a9bfa97269f82d43eb718dd[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sun Sep 15 06:29:33 2024 +0500
+
+    added role permission to project and added middleware to controllers
+
+[33mcommit e28b5fe26846b527c952ac6d49645362979246e7[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sat Sep 14 15:49:59 2024 +0500
+
+    added formrequest to register
+
+[33mcommit 31a3d32c7aef9ba38903af8388a884e845ebb116[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sat Sep 14 15:46:06 2024 +0500
+
+    added token to register response
+
+[33mcommit d0ced0f422ba04dafe9bc8818c538630a08baa03[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sat Sep 14 14:38:53 2024 +0500
+
+    added logout route
+
+[33mcommit c150277321845b528d1ba3a30e8ed0fc2538b256[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sat Sep 14 14:38:20 2024 +0500
+
+    login and logout method was done
+
+[33mcommit 3495098ec724b87dfdab62f50facadfdc29f4a96[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sat Sep 14 12:57:42 2024 +0500
+
+    store, getUserComments, getPostComments was done
+
+[33mcommit b042197c99c36f2846308c42f581a4443b0bf26e[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Sat Sep 14 12:54:40 2024 +0500
+
+    fake data for comments
+
+[33mcommit 76b224bb4b3edcefc75264297d148704ff5113d0[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 14:27:54 2024 +0500
+
+    debugbar was added
+
+[33mcommit 2ad85947f7ac711fe91163b95bbfd7b33c70825d[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 14:24:54 2024 +0500
+
+    get post and user comments was done
+
+[33mcommit 05ecd87c2593e90f57d5c2aa30ec3991123be2b2[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 14:19:07 2024 +0500
+
+    added resource for comment
+
+[33mcommit b7b10c83a6648e8132947d55a4f8fd5e7509dd68[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 14:15:50 2024 +0500
+
+    sending confirmation code was done
+
+[33mcommit fbb871a210343556acb08058d371680fabcb690a[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 11:11:56 2024 +0500
+
+    changed global 'from' values
+
+[33mcommit f06313f4fa6ea8664d0bd706d94be72aa5695994[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 11:07:57 2024 +0500
+
+    composer updated
+
+[33mcommit 3ef2e9c709941f76cc80f9f4fe9f697289438705[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 11:05:42 2024 +0500
+
+    add limit to send request to api
+
+[33mcommit 5046cd59ccc4ee02d55cea0a1170a06c4542f23e[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 11:04:06 2024 +0500
+
+    added image field
+
+[33mcommit fefa81c651c8c3bcf6e3731b598826780e54479b[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 11:01:49 2024 +0500
+
+    added image field
+
+[33mcommit 2bb6b13eb7812d3e287a8ab5b5f840c1343807ec[m
+Author: abdulloh-uzb <usmonovabdulloh87@gmail.com>
+Date:   Fri Sep 13 11:00:08 2024 +0500
+
+    added authcontroller and added register and login route
+
+[33mcommit 62997275f180e218c2389cff058a9b34beea4058[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Mon Sep 9 19:02:57 2024 +0500
+
+    finished index and create method for comment
+
+[33mcommit f6f2f8b84fff49e016b145fed0aa3e1de6015d16[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Mon Sep 9 19:02:07 2024 +0500
+
+    added routes for comment
+
+[33mcommit a649e9795cf30aea715e37619689c0a93db96077[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Mon Sep 9 19:01:40 2024 +0500
+
+    added relationship between post and comment
+
+[33mcommit c4cf693a34ee4003710fd6789a89c550556442c2[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Mon Sep 9 18:59:12 2024 +0500
+
+    started comment part
+
+[33mcommit 4f723c58d8c36b69b91671e809c5799828c9c468[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Mon Sep 9 14:48:12 2024 +0500
+
+    finished post functions
+
+[33mcommit 38056944549ba864721069b06c31c880a45d9eaf[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sun Sep 8 01:40:14 2024 +0500
+
+    finished category
+
+[33mcommit 60f0d80819941e9c27fc81df799d519a83f9667c[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sun Sep 8 01:37:17 2024 +0500
+
+    made slug unique in migrations
+
+[33mcommit 47f1d633fec38576d5947fdd31810279ba8c5060[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sat Sep 7 21:23:46 2024 +0500
+
+    name_ru was changed to nullable in categories
+
+[33mcommit 4089b4048489526a41b89287fda578af8e392bb2[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sat Sep 7 17:43:59 2024 +0500
+
+    added relationship between post and category
+
+[33mcommit 00febed3fd2a7d1007a74c59d6bc1988c9dffafe[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sat Sep 7 17:38:49 2024 +0500
+
+    addd fillable to category model
+
+[33mcommit 4506101e3aae6a59f27ffff60029b16f6d552047[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sat Sep 7 17:34:46 2024 +0500
+
+    added controller, model and migration for post and category
+
+[33mcommit 3d515d38bcb28c62b59f56d2cf95514aae695cd6[m
+Author: abdulloh-uzb <uabdulloh11@gmail.com>
+Date:   Sat Sep 7 17:12:00 2024 +0500
+
+    initial commit

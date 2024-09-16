@@ -4,6 +4,44 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @OA\Schema(
+ *     schema="StorePostRequest",
+ *     type="object",
+ *     required={"title_uz", "title_ru", "body_uz", "body_ru"},
+ *     @OA\Property(
+ *         property="title_uz",
+ *         type="string",
+ *         description="Title of the post"
+ *     ),
+ *     @OA\Property(
+ *         property="title_ru",
+ *         type="string",
+ *         description="Content of the post"
+ *     ),
+ *     @OA\Property(
+ *         property="body_uz",
+ *         type="string",
+ *         description="Content of the post"
+ *     ),
+ *    @OA\Property(
+ *         property="body_ru",
+ *         type="string",
+ *         description="Content of the post"
+ *     ),
+ *    @OA\Property(
+ *         property="category_id",
+ *         type="integer",
+ *         description="Content of the post"
+ *     ),
+ *     @OA\Property(
+ *         property="tags",
+ *         type="object",
+ *         description="Content of the post"
+ *     )
+ * )
+ */
+
 class StorePostRequest extends FormRequest
 {
     /**

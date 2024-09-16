@@ -4,6 +4,41 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
+
+/**
+ * @OA\Schema(
+ *     schema="RegisterRequest",
+ *     type="object",
+ *     required={"name","email","password","password_confirmation"},
+ *     @OA\Property(
+ *         property="name",
+ *         type="string",
+ *         description="name of user"
+ *     ),
+ *     @OA\Property(
+ *         property="email",
+ *         type="string",
+ *         description="name of email"
+ *     ),
+ *     @OA\Property(
+ *         property="password",
+ *         type="string",
+ *         description="password"
+ *     ),
+ *    @OA\Property(
+ *         property="password_confirmation",
+ *         type="string",
+ *         description="repeat password"
+ *     ),
+ *    @OA\Property(
+ *         property="image",
+ *         type="string",
+ *         description="profile picture of the user",
+ *         nullable=true
+ *     ),
+ * )
+ */
 class RegisterRequest extends FormRequest
 {
     /**

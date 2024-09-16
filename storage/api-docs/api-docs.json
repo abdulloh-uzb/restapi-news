@@ -1,0 +1,291 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Swagger with Laravel",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Register",
+                "operationId": "8a56853624e025573120a09a4c75d468",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RegisterRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "User registered successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User registered successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Login",
+                "operationId": "a3b306d14572d1f4bd6c064b3233e7b8",
+                "responses": {
+                    "201": {
+                        "description": "User registered successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User registered successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get current logged user",
+                "operationId": "31234491f21a35d2de09d4fae7ee13c4",
+                "responses": {
+                    "200": {
+                        "description": "current user"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Get a list of posts",
+                "operationId": "e9eaf7df702a94f4443677bd1a36cfe6",
+                "responses": {
+                    "200": {
+                        "description": "List of posts"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Create a post",
+                "operationId": "4a657e51a0066c64781851f2fd2651e2",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StorePostRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Post created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PostResource"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "/api/posts/{post}": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Get post by id",
+                "operationId": "d3910995cb542d02254c9fc6133cc10c",
+                "parameters": [
+                    {
+                        "name": "post id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    },
+                    "404": {
+                        "description": "Post not found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "RegisterRequest": {
+                "required": [
+                    "name",
+                    "email",
+                    "password",
+                    "password_confirmation"
+                ],
+                "properties": {
+                    "name": {
+                        "description": "name of user",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "name of email",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "password_confirmation": {
+                        "description": "repeat password",
+                        "type": "string"
+                    },
+                    "image": {
+                        "description": "profile picture of the user",
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "type": "object"
+            },
+            "StorePostRequest": {
+                "required": [
+                    "title_uz",
+                    "title_ru",
+                    "body_uz",
+                    "body_ru"
+                ],
+                "properties": {
+                    "title_uz": {
+                        "description": "Title of the post",
+                        "type": "string"
+                    },
+                    "title_ru": {
+                        "description": "Content of the post",
+                        "type": "string"
+                    },
+                    "body_uz": {
+                        "description": "Content of the post",
+                        "type": "string"
+                    },
+                    "body_ru": {
+                        "description": "Content of the post",
+                        "type": "string"
+                    },
+                    "category_id": {
+                        "description": "Content of the post",
+                        "type": "integer"
+                    },
+                    "tags": {
+                        "description": "Content of the post",
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "PostResource": {
+                "properties": {
+                    "id": {
+                        "description": "ID of the post",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "Title of the post",
+                        "type": "string"
+                    },
+                    "category": {
+                        "description": "category of the post",
+                        "type": "string"
+                    },
+                    "image": {
+                        "description": "Image of the post",
+                        "type": "string"
+                    },
+                    "views": {
+                        "description": "views of the post",
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Auth",
+            "description": "Auth"
+        },
+        {
+            "name": "Users",
+            "description": "Users"
+        },
+        {
+            "name": "Posts",
+            "description": "Posts"
+        }
+    ]
+}
